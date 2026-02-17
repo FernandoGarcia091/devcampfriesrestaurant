@@ -1,0 +1,22 @@
+.btn {
+    background-color: #cea135;
+    color: #11122b;
+    font-size: 1.25em;
+    padding: 10px 25px;
+    border: 1px solid #cea135;
+    border-radius: 2px;
+    outline: none;
+    transition: all 0.1s ease;
+    box-shadow: 0 1.5px 0 #a8831f;
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px 0 #a8831f;
+}
+
+.centered-btn-wrapper{
+    display:flex;
+    justify-content: center;
+}
