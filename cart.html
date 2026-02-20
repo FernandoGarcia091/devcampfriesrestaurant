@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cart | DevCamp Fantastic Fries</title>
+  <meta name="description" content="Review your cart, update quantities, and checkout your DevCamp Fantastic Fries order.">
+
+  <!-- Google Font: Roboto Condensed -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Google Font: Ubuntu Condensed -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+
+  <!-- Google Font: Roboto Slab -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css">
+  <link rel="stylesheet" href="styles/common.css">
+  <link rel="stylesheet" href="styles/nav.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/skewed-header.css">
+  <link rel="stylesheet" href="styles/helpers.css">
+  <link rel="stylesheet" href="styles/media-queries.css">
+</head>
+
+<body>
+  <!-- Skip link -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <!-- Accessibility link -->
+    <div class="a11y-ui">
+      <a href="#a11y-help" class="a11y-link" id="a11yLink" aria-controls="a11y-help" aria-expanded="false">
+        Accessibility
+      </a>
+    </div>
+
+    <!-- Accessibility modal -->
+    <div class="a11y-help" id="a11y-help" hidden>
+      <div class="a11y-help__overlay" data-a11y-close></div>
+
+      <div class="a11y-help__card" role="dialog" aria-label="Accessibility help">
+        <button class="a11y-help__close" type="button" data-a11y-close aria-label="Close">×</button>
+
+        <h2>Keyboard help</h2>
+        <ul>
+          <li><strong>Tab</strong>: move forward</li>
+          <li><strong>Shift + Tab</strong>: move backward</li>
+          <li><strong>Enter</strong>: activate</li>
+          <li><strong>Esc</strong>: close</li>
+        </ul>
+
+        <p class="a11y-help__note">
+          Tip: Press <strong>Tab</strong> once to reveal “Skip to content” and jump past navigation.
+        </p>
+      </div>
+    </div>
+
+    <!-- Skewed header -->
+    <div class="skewed-header">
+      <div class="header-bg" style="background-image: url('images/backgrounds/menu.jpg');"></div>
+
+      <div class="skewed-header-wrapper">
+        <div class="skewed-header-content">
+          <div class="heading-wrapper">
+            <h1>Cart</h1>
+          </div>
+
+          <nav class="links-wrapper" aria-label="Primary navigation">
+            <div class="nav-link"><a href="index.html">Home</a></div>
+            <div class="nav-link"><a href="about.html">About</a></div>
+            <div class="nav-link"><a href="menu.html">Menu</a></div>
+            <div class="nav-link"><a href="contact.html">Contact</a></div>
+            <div class="nav-link"><a href="cart.html" aria-current="page">Cart <span id="cartCount">(0)</span></a></div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-container">
+      <div class="content-wrapper">
+
+        <section class="cart-shell" aria-label="Shopping cart">
+          <div class="cart-header">
+            <h2 class="cart-title">Your Order</h2>
+            <button type="button" class="cart-clear" id="clearCartBtn">Clear cart</button>
+          </div>
+
+          <!-- Items render here -->
+          <div id="cartItems" class="cart-items" aria-live="polite"></div>
+
+          <!-- Summary -->
+          <div class="cart-summary">
+            <div class="cart-summary__row">
+              <span>Subtotal</span>
+              <span id="subtotal">$0.00</span>
+            </div>
+
+            <div class="cart-summary__row">
+              <span>Tax</span>
+              <span id="tax">$0.00</span>
+            </div>
+
+            <div class="cart-summary__row cart-summary__total">
+              <span>Total</span>
+              <span id="total">$0.00</span>
+            </div>
+
+            <div class="cart-actions">
+              <a class="cart-continue" href="menu.html">← Continue shopping</a>
+            </div>
+
+            <p class="cart-note">Demo checkout: fills a form, generates an order number, then clears the cart.</p>
+          </div>
+
+          <!-- Checkout form -->
+          <section class="checkout-shell" aria-label="Checkout form">
+            <h3 class="checkout-title">Checkout</h3>
+
+            <form id="checkoutForm" class="checkout-form" novalidate>
+              <div class="checkout-grid">
+                <div class="field">
+                  <label for="custName">Name <span aria-hidden="true">*</span></label>
+                  <input id="custName" name="custName" type="text" autocomplete="name" required placeholder="Your name">                </div>
+
+                <div class="field">
+                  <label for="custPhone">Phone <span aria-hidden="true">*</span></label>
+                  <input id="custPhone" name="custPhone" type="tel" autocomplete="tel" required placeholder="Your phone number">                </div>
+
+                <div class="field">
+                  <label for="fulfillment">Pickup or Delivery <span aria-hidden="true">*</span></label>
+                  <select id="fulfillment" name="fulfillment" required>
+                    <option value="" selected disabled>Choose one…</option>
+                    <option value="pickup">Pickup</option>
+                    <option value="delivery">Delivery</option>
+                  </select>
+                </div>
+
+                <div class="field" id="addressField" hidden>
+                  <label for="custAddress">Delivery Address <span aria-hidden="true">*</span></label>
+                  <input id="custAddress" name="custAddress" type="text" autocomplete="street-address" placeholder="123 Ocean Street, Avila Beach, CA">
+                </div>
+
+                <div class="field field--full">
+                  <label for="custNotes">Notes</label>
+                  <textarea id="custNotes" name="custNotes" rows="3" placeholder="Allergic to peanuts, extra napkins, etc."></textarea>
+                </div>
+              </div>
+
+              <div class="checkout-actions">
+                <button type="submit" class="btn cart-checkout" id="checkoutBtn">
+                  Place order
+                </button>
+
+                <p class="form-error" id="formError" role="alert" aria-live="polite" hidden></p>
+              </div>
+            </form>
+
+            <div id="checkoutMessage" class="checkout-message" hidden></div>
+          </section>
+
+        </section>
+
+      </div>
+    </div>
+
+    <div class="spacer60"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="logo-footer">
+      <img src="images/logos/decamp-fantastic-fries-logo-white.png" alt="DevCamp Fantastic Fries logo">
+    </div>
+
+    <div class="footer-phone-hours">
+      <span class="phone">555 555 5555</span>
+      <span class="hours">10 AM - MIDNIGHT</span>
+    </div>
+
+    <div class="links-wrapper" aria-label="Footer navigation">
+      <div class="nav-link"><a href="index.html">Home</a></div>
+      <div class="nav-link"><a href="about.html">About</a></div>
+      <div class="nav-link"><a href="menu.html">Menu</a></div>
+      <div class="nav-link"><a href="contact.html">Contact</a></div>
+      <div class="nav-link"><a href="cart.html" aria-current="page">Cart <span id="cartCountFooter">(0)</span></a></div>
+    </div>
+
+    <div class="social-media-icons-wrapper" aria-label="Social media">
+      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+      <a href="#" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+      <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="copyright-wrapper">
+      &copy; 2026 DevCamp &#124; All rights reserved
+    </div>
+  </footer>
+
+  <script defer src="styles/scripts/main.js"></script>
+</body>
+</html>

@@ -1,199 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <!-- Google Font: Roboto Condensed -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+  <title>Menu | DevCamp Fantastic Fries</title>
+  <meta name="description" content="Explore the DevCamp Fantastic Fries menu — spicy, medium, mild, and classic options. Find your perfect coding fuel.">
 
-<!-- Google Font: Ubuntu Condensed -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+  <!-- Google Font: Roboto Condensed -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
 
-<!-- Google Font: Roboto Slab -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Google Font: Ubuntu Condensed -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
 
+  <!-- Google Font: Roboto Slab -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css">
-    <link rel="stylesheet" href="styles/common.css">
-    <link rel="stylesheet" href="styles/nav.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="styles/skewed-header.css">
-    <link rel="stylesheet" href="styles/square-grid.css">
-    <link rel="stylesheet" href="styles/helpers.css">
-    <link rel="stylesheet" href="styles/media-queries.css">
-
-  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css">
+  <link rel="stylesheet" href="styles/common.css">
+  <link rel="stylesheet" href="styles/nav.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/skewed-header.css">
+  <link rel="stylesheet" href="styles/square-grid.css">
+  <link rel="stylesheet" href="styles/helpers.css">
+  <link rel="stylesheet" href="styles/media-queries.css">
 </head>
+
 <body>
+  <!-- Skip link (Accessibility) -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <!-- Accessibility text link (opens modal) -->
+    <div class="a11y-ui">
+      <a href="#a11y-help" class="a11y-link" id="a11yLink" aria-controls="a11y-help" aria-expanded="false">
+        Accessibility
+      </a>
+    </div>
+
+    <!-- Accessibility modal -->
+    <div class="a11y-help" id="a11y-help" hidden>
+      <div class="a11y-help__overlay" data-a11y-close></div>
+
+      <div class="a11y-help__card" role="dialog" aria-label="Accessibility help">
+        <button class="a11y-help__close" type="button" data-a11y-close aria-label="Close">×</button>
+
+        <h2>Keyboard help</h2>
+        <ul>
+          <li><strong>Tab</strong>: move forward</li>
+          <li><strong>Shift + Tab</strong>: move backward</li>
+          <li><strong>Enter</strong>: activate</li>
+          <li><strong>Esc</strong>: close</li>
+        </ul>
+
+        <p class="a11y-help__note">
+          Tip: Press <strong>Tab</strong> once to reveal “Skip to content” and jump past navigation.
+        </p>
+      </div>
+    </div>
+
+    <!-- Skewed header -->
     <div class="skewed-header">
-        <div class="header-bg" style="background-image: url('images/backgrounds/menu.jpg');"></div>
+      <div class="header-bg" style="background-image: url('images/backgrounds/menu.jpg');"></div>
 
-        <div class="skewed-header-wrapper">
-            <div class="skewed-header-content">
-                <div class="heading-wrapper">
-                    <h1>Menu</h1>
-                </div>
+      <div class="skewed-header-wrapper">
+        <div class="skewed-header-content">
+          <div class="heading-wrapper">
+            <h1>Menu</h1>
+          </div>
 
+          <nav class="links-wrapper" aria-label="Primary navigation">
+            <div class="nav-link"><a href="index.html">Home</a></div>
+            <div class="nav-link"><a href="about.html">About</a></div>
+            <div class="nav-link"><a href="menu.html" aria-current="page">Menu</a></div>
+            <div class="nav-link"><a href="contact.html">Contact</a></div>
+            <div class="nav-link"><a href="cart.html">Cart <span id="cartCount">(0)</span></a></div>
+          </nav>
 
-                <div class="links-wrapper"> 
-            <div class="nav-link">
-            <a href="index.html">Home</a>
-            </div>
-
-            <div class="nav-link">
-            <a href="about.html">About</a>
-            </div>
-
-            <div class="nav-link">
-            <a href="menu.html">Menu</a>
-            </div>
-
-            <div class="nav-link">
-            <a href="contact.html">Contact</a>
-            </div>
-        </div>    
         </div>
+      </div>
     </div>
-    </div>
+  </header>
 
-<!-- Menu 1 -->
+  <main id="main">
+    <!-- Menu grid -->
     <div class="squares-wrapper">
-        <div class="squares">
-                <div class="square">
-                    <div class="img-wrapper">
-                        <img src="images/squares/fries-sq-1.jpg" alt="Fries">
-                    </div>
+      <div class="squares">
 
-                    <div class="square-text-wrapper">
-                        <a href="#spicy" name="spicy" class="anchor-link">
-                        <h1>Spicy</h1>
-                        </a>
+        <!-- Spicy -->
+        <div class="square" id="spicy">
+          <div class="img-wrapper">
+            <img src="images/squares/fries-sq-1.jpg" alt="Spicy fries">
+          </div>
 
-                        <ul>
-                            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
-                            <li>Eveniet rerum maiores hic odio perferendis. A, non.</li>
-                            <li>Enim, corrupti voluptates et ut voluptatum maiores. Laborum?</li>
-                            <li>Nesciunt facere excepturi molestiae, est non obcaecati ducimus.</li>
-                        </ul>
-                    </div>
+          <div class="square-text-wrapper">
+            <h1>Spicy</h1>
+
+            <ul class="menu-list">
+              <li class="menu-item">
+                <div class="menu-item__info">
+                  <strong>Spicy Sriracha Fries</strong>
+                  <span>$6.99</span>
                 </div>
-                <!-- Menu 2 -->
-                <div class="square">
-                    <div class="square-text-wrapper">
-                        <a href="#medium" name="medium" class="anchor-link">
-                        <h1>Medium</h1>
-                        </a>
-                        <ol>
-                            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
-                            <li>Eveniet rerum maiores hic odio perferendis. A, non.</li>
-                            <li>Enim, corrupti voluptates et ut voluptatum maiores. Laborum?</li>
-                            <li>Nesciunt facere excepturi molestiae, est non obcaecati ducimus.</li>
-                        </ol>
+                <button class="btn add-to-cart" type="button"
+                  data-id="spicy-sriracha-fries"
+                  data-name="Spicy Sriracha Fries"
+                  data-price="6.99">
+                  Add to cart
+                </button>
+              </li>
 
-                    </div>
-                    <div class="img-wrapper">
-                        <img src="images/squares/fries-sq-2.jpg" alt="Fries">
-                    </div>
-                
-        </div>
-        <div class="square">
-                    <div class="img-wrapper">
-                        <img src="images/squares/fries-sq-1.jpg" alt="Fries">
-                    </div>
+              <li class="menu-item">
+                <div class="menu-item__info">
+                  <strong>Hot Garlic Fries</strong>
+                  <span>$7.49</span>
+                </div>
+                <button class="btn add-to-cart" type="button"
+                  data-id="hot-garlic-fries"
+                  data-name="Hot Garlic Fries"
+                  data-price="7.49">
+                  Add to cart
+                </button>
+              </li>
 
-                    <div class="square-text-wrapper">
-                        <a href="#mild" name="mild" class="anchor-link">
-                        <h1>Mild</h1>
-                        </a>
-                         <ul>
-                            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
-                            <li>Eveniet rerum maiores hic odio perferendis. A, non.</li>
-                            <li>Enim, corrupti voluptates et ut voluptatum maiores. Laborum?</li>
-                            <li>Nesciunt facere excepturi molestiae, est non obcaecati ducimus.</li>
-                        </ul>
-                    </div>
+              <li class="menu-item">
+                <div class="menu-item__info">
+                  <strong>Buffalo Ranch Fries</strong>
+                  <span>$7.99</span>
                 </div>
-                <!-- Menu 2 -->
-                <div class="square">
-                    <div class="square-text-wrapper">
-                        <a href="#no flavor" name="no flavor" class="anchor-link">
-                        <h1>No Flavor</h1>
-                        </a>
-                        <ol>
-                            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
-                            <li>Eveniet rerum maiores hic odio perferendis. A, non.</li>
-                            <li>Enim, corrupti voluptates et ut voluptatum maiores. Laborum?</li>
-                            <li>Nesciunt facere excepturi molestiae, est non obcaecati ducimus.</li>
-                        </ol>
-                    </div>
-                    <div class="img-wrapper">
-                        <img src="images/squares/fries-sq-2.jpg" alt="Fries">
-                    </div>
-                </div>
-            </div>
+                <button class="btn add-to-cart" type="button"
+                  data-id="buffalo-ranch-fries"
+                  data-name="Buffalo Ranch Fries"
+                  data-price="7.99">
+                  Add to cart
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
 
+        <!-- Medium -->
+        <div class="square" id="medium">
+          <div class="square-text-wrapper">
+            <h1>Medium</h1>
+
+            <ul class="menu-list">
+              <li class="menu-item">
+                <div class="menu-item__info">
+                  <strong>Chipotle Lime Fries</strong>
+                  <span>$6.49</span>
+                </div>
+                <button class="btn add-to-cart" type="button"
+                  data-id="chipotle-lime-fries"
+                  data-name="Chipotle Lime Fries"
+                  data-price="6.49">
+                  Add to cart
+                </button>
+              </li>
+
+              <li class="menu-item">
+                <div class="menu-item__info">
+                  <strong>Smoky BBQ Fries</strong>
+                  <span>$6.99</span>
+                </div>
+                <button class="btn add-to-cart" type="button"
+                  data-id="smoky-bbq-fries"
+                  data-name="Smoky BBQ Fries"
+                  data-price="6.99">
+                  Add to cart
+                </button>
+              </li>
+
+              <li class="menu-item">
+                <div class="menu-item__info">
+                  <strong>Jalapeño Cheddar Fries</strong>
+                  <span>$7.99</span>
+                </div>
+                <button class="btn add-to-cart" type="button"
+                  data-id="jalapeno-cheddar-fries"
+                  data-name="Jalapeño Cheddar Fries"
+                  data-price="7.99">
+                  Add to cart
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="img-wrapper">
+            <img src="images/squares/fries-sq-2.jpg" alt="Medium fries">
+          </div>
+        </div>
+
+        <!-- Mild -->
+        <div class="square" id="mild">
+          <div class="img-wrapper">
+            <img src="images/squares/fries-sq-1.jpg" alt="Mild fries">
+          </div>
+
+          <div class="square-text-wrapper">
+            <h1>Mild</h1>
+
+            <ul class="menu-list">
+              <li class="menu-item">
+                <div class="menu-item__info">
+                  <strong>Sea Salt & Herb Fries</strong>
+                  <span>$5.99</span>
+                </div>
+                <button class="btn add-to-cart" type="button"
+                  data-id="sea-salt-herb-fries"
+                  data-name="Sea Salt & Herb Fries"
+                  data-price="5.99">
+                  Add to cart
+                </button>
+              </li>
+
+              <li class="menu-item">
+                <div class="menu-item__info">
+                  <strong>Parmesan Pepper Fries</strong>
+                  <span>$6.49</span>
+                </div>
+                <button class="btn add-to-cart" type="button"
+                  data-id="parmesan-pepper-fries"
+                  data-name="Parmesan Pepper Fries"
+                  data-price="6.49">
+                  Add to cart
+                </button>
+              </li>
+
+              <li class="menu-item">
+                <div class="menu-item__info">
+                  <strong>Honey Mustard Fries</strong>
+                  <span>$6.99</span>
+                </div>
+                <button class="btn add-to-cart" type="button"
+                  data-id="honey-mustard-fries"
+                  data-name="Honey Mustard Fries"
+                  data-price="6.99">
+                  Add to cart
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Classic -->
+        <div class="square" id="classic">
+          <div class="square-text-wrapper">
+            <h1>Classic</h1>
+
+            <ul class="menu-list">
+              <li class="menu-item">
+                <div class="menu-item__info">
+                  <strong>Classic Sea Salt Fries</strong>
+                  <span>$4.99</span>
+                </div>
+                <button class="btn add-to-cart" type="button"
+                  data-id="classic-sea-salt-fries"
+                  data-name="Classic Sea Salt Fries"
+                  data-price="4.99">
+                  Add to cart
+                </button>
+              </li>
+
+              <li class="menu-item">
+                <div class="menu-item__info">
+                  <strong>Truffle Fries</strong>
+                  <span>$7.99</span>
+                </div>
+                <button class="btn add-to-cart" type="button"
+                  data-id="truffle-fries"
+                  data-name="Truffle Fries"
+                  data-price="7.99">
+                  Add to cart
+                </button>
+              </li>
+
+              <li class="menu-item">
+                <div class="menu-item__info">
+                  <strong>Loaded Cheese Fries</strong>
+                  <span>$8.49</span>
+                </div>
+                <button class="btn add-to-cart" type="button"
+                  data-id="loaded-cheese-fries"
+                  data-name="Loaded Cheese Fries"
+                  data-price="8.49">
+                  Add to cart
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="img-wrapper">
+            <img src="images/squares/fries-sq-2.jpg" alt="Classic fries">
+          </div>
+        </div>
+
+      </div>
     </div>
-    <!-- Footer -->
-    <div class="footer">
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
     <div class="logo-footer">
-        <img src="images/logos/decamp-fantastic-fries-logo-white.png" alt="Logo">
+      <img src="images/logos/decamp-fantastic-fries-logo-white.png" alt="DevCamp Fantastic Fries logo">
     </div>
 
     <div class="footer-phone-hours">
-        <span class="phone">
-            555 555 5555
-        </span>
-
-        <span class="hours">
-            10 AM - MIDNIGHT
-        </span>
+      <span class="phone">
+        <a href="tel:15555555555" style="color: inherit; text-decoration: none;">555 555 5555</a>
+      </span>
+      <span class="hours">10 AM - MIDNIGHT</span>
     </div>
 
-    <div class="links-wrapper"> 
-            <div class="nav-link">
-            <a href="index.html">Home</a>
-            </div>
+    <div class="links-wrapper" aria-label="Footer navigation">
+      <div class="nav-link"><a href="index.html">Home</a></div>
+      <div class="nav-link"><a href="about.html">About</a></div>
+      <div class="nav-link"><a href="menu.html" aria-current="page">Menu</a></div>
+      <div class="nav-link"><a href="contact.html">Contact</a></div>
+      <div class="nav-link"><a href="cart.html">Cart <span id="cartCountFooter">(0)</span></a></div>
+    </div>
 
-            <div class="nav-link">
-            <a href="about.html">About</a>
-            </div>
+    <div class="social-media-icons-wrapper" aria-label="Social media">
+      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+      <a href="#" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+      <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+    </div>
 
-            <div class="nav-link">
-            <a href="menu.html">Menu</a>
-            </div>
+    <div class="copyright-wrapper">
+      &copy; 2026 DevCamp &#124; All rights reserved
+    </div>
+  </footer>
 
-            <div class="nav-link">
-            <a href="contact.html">Contact</a>
-            </div>
-        </div>
-
-        <div class="social-media-icons-wrapper">
-            <a href="#">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-
-            <a href="#">
-                <i class="fa-brands fa-x-twitter"></i>
-            </a>
-
-            <a href="#">
-                <i class="fa-brands fa-facebook-f"></i>
-            </a>
-        </div>
-
-        <div class="copyright-wrapper">
-            &copy; 2026 DevCamp &#124; All rights reserved
-        </div>
-        </div>
+  <!-- IMPORTANT: match your real folder path -->
+  <script defer src="styles/scripts/main.js"></script>
 </body>
 </html>

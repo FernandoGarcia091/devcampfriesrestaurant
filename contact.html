@@ -38,6 +38,37 @@
   
 </head>
 <body>
+  <!-- Skip link -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <!-- Accessibility link -->
+    <div class="a11y-ui">
+      <a href="#a11y-help" class="a11y-link" id="a11yLink" aria-controls="a11y-help" aria-expanded="false">
+        Accessibility
+      </a>
+    </div>
+
+    <!-- Accessibility modal -->
+    <div class="a11y-help" id="a11y-help" hidden>
+      <div class="a11y-help__overlay" data-a11y-close></div>
+
+      <div class="a11y-help__card" role="dialog" aria-label="Accessibility help">
+        <button class="a11y-help__close" type="button" data-a11y-close aria-label="Close">×</button>
+
+        <h2>Keyboard help</h2>
+        <ul>
+          <li><strong>Tab</strong>: move forward</li>
+          <li><strong>Shift + Tab</strong>: move backward</li>
+          <li><strong>Enter</strong>: activate</li>
+          <li><strong>Esc</strong>: close</li>
+        </ul>
+
+        <p class="a11y-help__note">
+          Tip: Press <strong>Tab</strong> once to reveal “Skip to content” and jump past navigation.
+        </p>
+      </div>
+    </div>
     <div class="skewed-header">
         <div class="header-bg" style="background-image: url('images/backgrounds/contact.jpg')"></div>
 
@@ -177,5 +208,6 @@
             &copy; 2026 DevCamp &#124; All rights reserved
         </div>
         </div>
+          <script defer src="styles/scripts/main.js"></script>
 </body>
 </html>
