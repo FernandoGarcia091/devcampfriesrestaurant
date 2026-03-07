@@ -1,23 +1,17 @@
-/* Common styles */
-body {
-    margin: 0px;
-    font-family: 'Roboto Condensed', sans-serif;
-}
 /* Common nav styles */
 .navigation-wrapper {
-   height: 190px;
-   background-color: #11122b;
-   color: #cbcbcb;
-   /* Flexbox container */
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding: 60px 100px;
-  
+    height: 190px;
+    background-color: #11122b;
+    color: #cbcbcb;
+    /* Flexbox container */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 100px;
 }
 
 /* Left column styles */
-.navigation-wrapper > .left-column { 
+.navigation-wrapper > .left-column {
     display: flex;
     align-items: center;
 }
@@ -37,13 +31,13 @@ body {
 }
 
 .navigation-wrapper > .left-column > .contact-hours-wrapper > .hours {
-    font-family: "Ubuntu Condensed", sans-serif;
+    font-family: 'Ubuntu Condensed', sans-serif;
     color: #858585;
     font-size: 0.8em;
 }
 
-.navigation-wrapper > .center-column > .links-wrapper > .nav-link a {
-    font-family: "Ubuntu Condensed", sans-serif;
+.links-wrapper > .nav-link a {
+    font-family: 'Ubuntu Condensed', sans-serif;
     color: white;
 }
 
@@ -52,7 +46,7 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 42px;
-    width: 100%;
+    width: 500px;
 }
 
 .navigation-wrapper > .center-column > .banner-image {
@@ -68,9 +62,10 @@ body {
 .links-wrapper {
     display: flex;
     justify-content: space-between;
-    text-align: center;
+    align-items: center;
 }
-.links-wrapper > .nav-link { 
+
+.links-wrapper > .nav-link {
     width: 70px;
     text-align: center;
 }
@@ -94,8 +89,7 @@ body {
 }
 
 .navigation-wrapper > .right-column > .address-wrapper {
-    font-family: "Ubuntu Condensed", sans-serif;
-    color: white;
+    font-family: 'Ubuntu Condensed', sans-serif;
     text-align: right;
 }
 
